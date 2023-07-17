@@ -1,0 +1,151 @@
+html{
+  background: var(--primary-color);
+}
+
+body{
+  font-family: 'Source Code Pro', monospace;
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  height: 100%;
+}
+
+
+h6 {
+  display: inline;
+}
+
+footer {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+:root {
+  --primary-color: #dbdbdb;
+  --secondary-color: #212121;
+  --third-color: #037dc4;
+}
+
+.dark-theme {
+  --primary-color: #212121;
+  --secondary-color: #a8a8a8;
+  --third-color: #00ccff;
+}
+
+#icon {
+  color: var(--secondary-color);
+  width: 20px;
+  padding-bottom: 5px;
+  margin-left: 20px;
+  cursor: pointer;
+  align-items: center;
+}
+
+a{
+  color: var(--secondary-color);
+}
+.yellow{
+  color: var(--third-color);
+}
+.correct{
+  color: #04c481;
+}
+.wrong{
+  color: #e84545;
+  text-decoration: underline;
+}
+.current{
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+.center{
+  text-align: center;
+}
+.if{
+  display: inline-flex;
+}
+
+.box {
+  max-width: 88%;
+  padding: 0 30px;
+}
+
+#heading{
+  align-self: left;
+  padding-top: 30px;
+  font-size: 1.75rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+.limits-box{
+  text-align: right;
+  margin: 0 35px 0 0 ;
+  font-size: 15px;
+}
+
+.stats{
+  margin: 10px auto 20px auto;
+}
+
+.details{
+  font-size: 6rem;
+}
+.stat-block{
+  padding: 0 30px;
+  min-width: 250px;
+}
+
+@media(max-width: 600px){
+  .details{
+    font-size: 5rem;
+  }
+  .stat-block{
+    min-width: 0;
+  }
+}
+
+.stat-name{
+  font-size: 1rem;
+  position: relative;
+  top: 45px;
+  right: 5px;
+}
+
+.text-display{
+  margin: 0 0 0 0;
+  font-size: 21px;
+  text-align: left;
+  min-height: 200px;
+  margin-bottom: 1vh;
+}
+
+input:focus, textarea:focus, select:focus, a:focus{
+  outline: 0 ;
+}
+a:focus,a:hover{
+  color: var(--third-color);
+  text-decoration: none;
+}
+
+.restart-button{
+  margin-top: 1%;
+  padding: 10px;
+
+}
+
+textarea{
+  background: var(--primary-color);
+  border: solid, #52575d;
+  border-width: 2px;
+  border-radius: 10px;
+  color: var(--secondary-color);
+  padding: 10px;
+  font-size: 1.2rem;
+  resize: none;
+  text-align: center;
+  margin-bottom: 15px;
+
+  /* shadow effect */
+  -webkit-box-shadow: 0px 0px 27px -1px rgba(48, 48, 48, 0.49);
+  -moz-box-shadow: 0px 0px 27px -1px rgba(44, 44, 44, 0.49);
+  box-shadow: 0px 0px 27px -1px rgba(59, 59, 59, 0.49);
+}
