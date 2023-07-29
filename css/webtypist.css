@@ -1,0 +1,262 @@
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: var(--primary-color);
+  box-shadow: none;
+}
+
+:root {
+  --primary-color: #dbdbdb;
+  --secondary-color: #212121;
+  --third-color: #037dc4;
+}
+
+.dark-theme {
+  --primary-color: #212121;
+  --secondary-color: #a8a8a8;
+  --third-color: #00ccff;
+}
+
+#lessonLabel, #metrics {
+  color: var(--third-color);
+  font-weight: 100;
+}
+.center{
+  text-align: center;
+}
+#icon {
+  color: var(--secondary-color);
+  width: 20px;
+  padding-bottom: 5px;
+  margin-left: 20px;
+  cursor: pointer;
+  align-items: center;
+}
+
+.yellow{
+  color: var(--third-color);
+}
+
+#heading, #toggle-mode{
+  margin-top: 0;
+  margin-bottom: 50px;
+  align-self: left;
+  font-size: 1.75rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+#toggle-mode {
+  font-size: 15px;
+}
+
+#wrapper, #footer {
+  width: 85vw;
+}
+
+#wrapper {
+  margin-top: 30px;
+  position: relative;
+  min-height: 100%;
+  padding: 0 10px;
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+* html #wrapper { /* IE6 does not support min-height */
+  height: 100%;
+}
+
+#content {
+  padding-bottom: 0px; /* >= height of the footer */
+  background-color: var(--primary-color);
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  height: 0px; /* 34 + 1 + 5 = 40px */
+  padding-top: 5px;
+  font-size: smaller;
+}
+
+
+/******************************************************************************
+ * Main text prompt/input area
+ */
+
+ .txt {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+ }
+
+#level {
+  background-color: var(--primary-color);
+  font-size: medium;
+  padding: 5px;
+  border-radius: 30px;
+}
+
+#lessonSelector {
+  font-size: 1em;
+  padding-left: 3em;
+}
+
+#lessonInput {
+  padding: 2em 4em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#txtPrompt {
+  background: var(--primary-color);
+  border: solid, #52575d;
+  border-width: 2px;
+  border-radius: 10px;
+  color: var(--secondary-color);
+  padding: 10px;
+  font-size: 1.1rem;
+  resize: none;
+  text-align: center;
+  margin-bottom: 20px;
+
+}
+#txtInput {
+  background: var(--primary-color);
+  border: solid, #52575d;
+  border-width: 2px;
+  border-radius: 10px;
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+  padding: 10px;
+  resize: none;
+  text-align: center;
+
+  /* shadow effect */
+  -webkit-box-shadow: 0px 0px 27px -1px rgba(48, 48, 48, 0.49);
+  -moz-box-shadow: 0px 0px 27px -1px rgba(44, 44, 44, 0.49);
+  box-shadow: 0px 0px 27px -1px rgba(59, 59, 59, 0.49);
+}
+
+#lessonInput textarea.error {
+  background-color: red;
+}
+
+.hints #lessonInput textarea {
+  width: 80%;
+}
+
+
+/******************************************************************************
+ * Visual hints: colored keys
+ */
+
+.hints li.active,
+.hints ul#keyboard li.specialKey.active {
+  background-color: brown;
+}
+
+.hints li.active * {
+  font-weight: bold;
+  color: white;
+}
+
+.hints .left2  { background-color: #db0; }
+.hints .right2 { background-color: #ee0; }
+.hints .left3, .hints .right3 { background-color: #ac0; }
+.hints .left4, .hints .right4 { background-color: #3bb; }
+.hints .left5, .hints .right5 { background-color: #88f; }
+
+.hints li#ac01, .hints li#ac02, .hints li#ac03,
+.hints li#ac08, .hints li#ac09, .hints li#ac10,
+.hints li#ac04, .hints li#ac07 { /* home row */
+  background-image: url(images/grid4.gif);
+  font-weight: bold;
+  color: white;
+}
+
+
+/******************************************************************************
+ * Visual hints: hands picture
+ */
+
+#hands {
+  float: right;
+  position: relative;
+  margin-top: 5px;
+  width: 155px;
+  height: 90px;
+  overflow: hidden;
+  display: none;
+}
+
+.hints #hands {
+  display: block;
+}
+
+#hands.left5  span { background-position: left 810px; }
+#hands.left4  span { background-position: left 720px; }
+#hands.left3  span { background-position: left 630px; }
+#hands.left2  span { background-position: left 540px; }
+#hands.thumb  span { background-position: left 450px; }
+#hands.right2 span { background-position: left 360px; }
+#hands.right3 span { background-position: left 270px; }
+#hands.right4 span { background-position: left 180px; }
+#hands.right5 span { background-position: left  90px; }
+
+#hands span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  background-image: url(images/hands.png);
+  background-position: left top;
+}
+
+
+
+/******************************************************************************
+ * Keyboard settings: layout, geometry
+ */
+
+
+#keyboardSelector {
+  margin-bottom: 3em;
+  height: 40px;
+  float: center;
+  margin-top: -10px;
+}
+
+#keyboardSelector dl * {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#keyboardSelector dl dt {
+  float: left;
+  width: 200px;
+  height: 1em;
+  line-height: 1em;
+  text-align: right;
+}
+
+#keyboardSelector dl dd {
+  text-align: left;
+  height: 1.5em;
+  line-height: 1.5em;
+}
+
